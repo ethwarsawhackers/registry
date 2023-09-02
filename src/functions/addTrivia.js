@@ -1,8 +1,8 @@
 module.exports = async function (state, action, handler) {
-    if(!state.trivias[action.caller]){
-        state.trivias[action.caller]=[]
+    if(!state.trivias[action.input.address]){
+        state.trivias[action.input.address]=[]
     }
-    state.trivias[action.caller].push(action.input.id)
+    state.trivias[action.input.address].push(action.input.id)
     return {state}
 }
 /*function-description
